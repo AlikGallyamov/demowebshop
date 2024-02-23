@@ -2,3 +2,5 @@ pytest==8.0.0
 selene==2.0.0rc8
 allure-pytest
 requests
+python-dotenv
+curlify
