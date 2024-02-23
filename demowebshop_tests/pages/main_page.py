@@ -15,13 +15,13 @@ class MainPage:
     def add_item_to_cart(self, cookie_name, cookie):
         with allure.step("Добавляем товар в корзину через API"):
             endpoint = "/addproducttocart/details/75/1"
-            data = get_data_for_adding_a_card()
+            data = get_data_for_adding_a_card
             post_request(endpoint, data, cookie_name, cookie)
 
     def delete_item_from_cart(self, cookie_name, cookie):
         with allure.step("Удаляем товар из корзины через АПИ"):
             endpoint = "/addproducttocart/details/75/1"
-            data = get_data_for_deleting_a_card()
+            data = get_data_for_deleting_a_card
             data['addtocart_75.UpdatedShoppingCartItemId'] = browser.element('[class="remove-from-cart"] > input').get(
                 query.attribute('value'))
             post_request(endpoint, data, cookie_name, cookie)
